@@ -24,31 +24,32 @@ export default function Home() {
   const showBlog = false;
 
   return (
-    <div className="mx-auto mt-8 mb-16 flex max-w-[680px] flex-col px-6 md:mt-16">
+    <div className="mx-auto mt-8 mb-16 flex max-w-full sm:max-w-[680px] flex-col px-4 sm:px-6 md:mt-16">
       <Navigation showBlog={showBlog} />
 
       <main className="flex flex-col gap-10 font-mono text-xs">
         {/* Header */}
         <header className="flex flex-col gap-4">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
             <div className="flex flex-col gap-1">
               <h1 className="text-base font-medium text-white">
                 <EasterEgg>quinn singletary</EasterEgg>
               </h1>
-
-              <div className="flex items-center gap-2 text-[11px] text-[#808080]">
+              <div className="flex flex-wrap items-center gap-2 text-[11px] text-[#808080]">
                 <span>software engineer</span>
                 <span>·</span>
                 <span>new york</span>
               </div>
             </div>
 
-            <SystemStatus />
+            <div className="sm:ml-4">
+              <SystemStatus />
+            </div>
           </div>
 
           <TypingText
             text="building with react, typescript, and modern infrastructure."
-            className="leading-relaxed text-[#808080]"
+            className="leading-relaxed text-[#808080] text-[12px] sm:text-[13px] max-w-full sm:max-w-[600px]"
           />
         </header>
 
@@ -56,11 +57,11 @@ export default function Home() {
         <section className="flex flex-col gap-3">
           <h2 className="text-xs font-medium text-white">tech</h2>
 
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 text-[11px]">
             {TECH_STACK.map((tech) => (
               <span
                 key={tech}
-                className="rounded border border-[#808080] border-opacity-20 px-2 py-1 text-[11px] text-[#808080]"
+                className="rounded border border-[#808080] border-opacity-20 px-2 py-1"
               >
                 {tech}
               </span>
