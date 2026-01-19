@@ -139,17 +139,41 @@ export default function Home() {
         <section className="flex flex-col gap-5">
           <h2 className="text-xs font-medium text-white">projects</h2>
 
-          <div className="flex flex-col gap-2">
-            <div className="flex items-baseline justify-between">
-              <span className="text-[11px] text-white">coming soon</span>
-              <span className="animate-pulse text-[10px] text-[#00ff41]">
-                ● building
-              </span>
+          <div className="group flex flex-col gap-3">
+            <div className="flex flex-col gap-1">
+              <a
+                href="https://www.ghostdeps.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glitch-hover font-medium text-white transition-colors hover:text-[#00ff41]"
+              >
+                ghostdeps
+              </a>
             </div>
 
             <p className="text-[11px] leading-relaxed text-[#808080]">
-              building something interesting. check back soon.
+              npm dependency health scanner. visualize dependency trees, detect
+              security vulnerabilities, and check maintenance status before
+              installing packages.
             </p>
+
+            <div className="flex flex-wrap gap-1.5 text-[10px]">
+              {[
+                'next.js',
+                'react',
+                'typescript',
+                'tailwind',
+                'zustand',
+                'vitest',
+              ].map((tech) => (
+                <span
+                  key={tech}
+                  className="rounded border border-[#808080] border-opacity-20 px-1.5 py-0.5"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
         </section>
 
