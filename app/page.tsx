@@ -175,6 +175,42 @@ export default function Home() {
               ))}
             </div>
           </div>
+
+          <div className="group flex flex-col gap-3">
+            <div className="flex flex-col gap-1">
+              <a
+                href="https://www.jibe.day/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glitch-hover font-medium text-white transition-colors hover:text-[#00ff41]"
+              >
+                jibe
+              </a>
+            </div>
+
+            <p className="text-[11px] leading-relaxed text-[#808080]">
+              group trip date planner. share a link with friends, mark
+              availability on a full-year calendar, and instantly find the best
+              windows for everyone.
+            </p>
+
+            <div className="flex flex-wrap gap-1.5 text-[10px]">
+              {[
+                'next.js',
+                'react',
+                'typescript',
+                'tailwind',
+                'supabase',
+              ].map((tech) => (
+                <span
+                  key={tech}
+                  className="rounded border border-[#808080] border-opacity-20 px-1.5 py-0.5"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
         </section>
 
         {showBlog && (
